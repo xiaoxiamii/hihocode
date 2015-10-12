@@ -29,7 +29,7 @@ root : index of root in current segment tree
 arr: arrary to build segment tree;
 istart: the begin of arr;
 iend: the end of arr;
-*/
+*/ 
 void seg_tree_build(int root, int arr[], int istart, int iend) {
 
 	seg_tree[root].addMark = 0;
