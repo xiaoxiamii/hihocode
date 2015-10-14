@@ -22,7 +22,7 @@ struct seg_tree_node
 	int val; // value
 	int addMark; // lazy mark;
 } seg_tree[MAX_N*4];
-
+ 
 /*
 function:
 */
@@ -59,8 +59,8 @@ root: index of current segment tree
 */
 void seg_tree_push_down(int root, int nstart, int nend) {
 	if(seg_tree[root].addMark !=0 ) {
-		//ÉèÖÃ×óÓÒº¢×Ó½ÚµãµÄ±êÖ¾Óò£¬ÒòÎªº¢×Ó½Úµã¿ÉÄÜ±»¶à´ÎÑÓ³Ù±ê¼ÇÓÖÃ»ÓĞÏòÏÂ´«µİ
-		//±êÖ¾Óò¿ÉÒÔ¸ù¾İÌâÄ¿µÄĞèÇóĞŞ¸ÄÏà¹ØµÄÖµ¡£
+		//è®¾ç½®å·¦å³å­©å­èŠ‚ç‚¹çš„æ ‡å¿—åŸŸï¼Œå› ä¸ºå­©å­èŠ‚ç‚¹å¯èƒ½è¢«å¤šæ¬¡å»¶è¿Ÿæ ‡è®°åˆæ²¡æœ‰å‘ä¸‹ä¼ é€’
+		//æ ‡å¿—åŸŸå¯ä»¥æ ¹æ®é¢˜ç›®çš„éœ€æ±‚ä¿®æ”¹ç›¸å…³çš„å€¼ã€‚
 		seg_tree[root*2 +1].addMark = seg_tree[root].addMark;
 		seg_tree[root*2 +2].addMark =seg_tree[root].addMark;
 
